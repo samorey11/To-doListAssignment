@@ -9,32 +9,27 @@
       src="https://code.jquery.com/jquery-3.3.1.min.js"
       integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
       crossorigin="anonymous"></script>
+    <script src="index.js"></script>
     <title>To-Do List</title>
   </head>
   <body>
     <div class='container'>
-      <div class="row">
+      <div row="row">
         <div class="col-xs-12">
           <h2>To-Do List</h2>
-          <div class="row">
-            <div class="col-xs-12">
-              <div id="todo-list" class="row">
-              </div>
+            <div id="todo-list">
             </div>
-            <div class="col-xs-8">
-              <form class="new to-do">
-                <input type="text" placeholder="Add Something To-Do" required/>
-                <button>Add To-Do</button>
-              </form>
-            </div>
-          </div>
-          <div class="sort-options">
-            <button>To-Do's & To-Done's</button>
-            <button>To-Do's</button>
-            <button>To-Done's</button>
-          </div>
+            <form id="todo-input">
+              <input id="new-task" type="text" placeholder="Add Something To-Do" required/>
+              <button>Add To-Do</button>
+            </form>
+
+            <!--<div class="sort-options">
+              <button>To-Do's & To-Done's</button>
+              <button>To-Do's</button>
+              <button>To-Done's</button>
+            </div> -->
         </div>
       </div>
     </div>
-    <script src="index.js"></script>
   </body>
