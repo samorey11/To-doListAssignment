@@ -18,7 +18,7 @@ $(document).ready(function () {
         response.tasks.forEach(function (task) {
           
           //task = task.content;
-          $('#todo-list').append('<div class="row"><p class="col-xs-8">'+task.content+'</p><button class="remove" data-id="'+task.id+'">Remove</button>');
+          $('#todo-list').append('<div class="row"><input class="mark-complete" type="checkbox" data-id="'+task.id+'"' + (task.completed ? 'checked' : '') +'><p class="col-xs-8">'+task.content+'</p><button class="remove" data-id="'+task.id+'">Remove</button>');
           
           //$('#todo-list').append('<p><input type="checkbox" value="completed">' + task + '<button type="button" class="btn btn-danger remove-button">Remove</button></p>');
         });
@@ -59,7 +59,7 @@ $(document).ready(function () {
   var removeItem = function (id) {
     $.ajax({
       type: 'DELETE', 
-      url: 'https://altcademy-to-do-list-api.herokuapp.com/tasks/'+id +'?api_key=512',
+      url: 'https://altcademy-to-do-list-api.herokuapp.com/tasks/'+id+'?api_key=512',
       success: function (response, textStatus) {
         console.log(response);
         updateTaskList();
@@ -74,6 +74,42 @@ $(document).ready(function () {
     removeItem($(this).data('id'))
   });
   
+  var markCompleted = function (id) {
+    $.ajax ({
+      type: 'PUT',
+      url: 'https://altcademy-to-do-list-api.herokuapp.com/tasks/'+id+'/mark_complete?api_key=512',
+      dataType: 'json',
+      success: function (response, textStatus) {
+        console.log(response);
+        updateTaskList();
+      },
+      error: function (request, textStatus, errorMessage) {
+        console.log(errorMessage);
+      }
+    });
+  }
+
+  var markActive = function (id) {
+    $.ajax ({
+      type: 'PUT',
+      url: 'https://altcademy-to-do-list-api.herokuapp.com/tasks/'+id+'/mark_active?api_key=512',
+      dataType: 'json',
+      sucess: function (response, textStatus) {
+        updateTaskList();
+      },
+      error: function (request, textStatus, errorMessage) {
+        console.log(errorMessage);
+      }
+    });
+  };
+
+  $(document).on('click', '.mark-complete', function () {
+    if (this.checked) {
+      markCompleted($(this).data('id'))
+    } else {
+      markActive($(this).data('id'));
+    }
+  });
 
   updateTaskList();
 });
