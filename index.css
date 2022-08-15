@@ -1,0 +1,14 @@
+body {
+  
+  
+}
+
+#todo-list {
+  text-align: center;
+  padding-left: 4em;
+  margin-top: 2em;
+}
+
+#todo-item {
+  margin-top: 1em;
+}

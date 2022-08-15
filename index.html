@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>repl.it</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
     <link href="index.css" rel="stylesheet" type="text/css" />
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
@@ -13,23 +14,18 @@
     <title>To-Do List</title>
   </head>
   <body>
-    <div class='container'>
-      <div row="row">
-        <div class="col-xs-12">
-          <h2>To-Do List</h2>
-            <div id="todo-list">
-            </div>
-            <form id="todo-input">
-              <input id="new-task" type="text" placeholder="Add Something To-Do" required/>
-              <button>Add To-Do</button>
-            </form>
-
-            <!--<div class="sort-options">
-              <button>To-Do's & To-Done's</button>
-              <button>To-Do's</button>
-              <button>To-Done's</button>
-            </div> -->
-        </div>
+    <div class="container">
+      <h1>To-Do List</h2>
+      <div>
+        <form id="todo-input">
+          <input id="new-task" type="text" placeholder="What needs to be done?" required>
+          
+          <button>Add to-do</button>
+        </form>
       </div>
     </div>
+    <div></div>
+    <div id="todo-list">
+    </div>
+    
   </body>
