@@ -1,14 +1,84 @@
 body {
-  
-  
+  font-family: Tahoma, sans-serif;
+  font-weight: 400;
+  font-size: 1.5em;
+  color: whitesmoke;
+  background-color: #2595F3;
 }
 
 #todo-list {
   text-align: center;
   padding-left: 4em;
   margin-top: 2em;
+  font-size: 2em;
+  background-color: #5DECED;
+  border-radius: 2rem;
+  box-shadow: 0 15px 20px rgba(0,0,0,0.2);
+  padding: .25rem 0;
 }
 
 #todo-item {
   margin-top: 1em;
+}
+
+#todo-input button {
+  background-color: #F3A125;
+  border: none;
+  padding: 1rem 2rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: .5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  font-size: 1em;
+  vertical-align: center;
+}
+
+#todo-input input {
+  border-radius: 1rem;
+  box-shadow: 0 10px 15px rgba(0,0,0,0.1);
+  padding: .25rem 0;
+  font-size: 2em;
+  background-color: #5DECED;
+
+}
+
+::placeholder {
+  color: #F3A125
+}
+
+.remove {
+  background-color: #F3A125;
+  border: none;
+  padding: 1rem 2rem;
+  margin-left: 1rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-radius: .5rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  font-size: 0.5em;
+  vertical-align: center;
+}
+
+h1 {
+  border-bottom: 4px solid #5DECED;
+  margin: 3em, 3em;
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  width: 60%;
+  margin-right: 20%;
+  margin-left: 20%;
+  font-size: 5em;
+  background-color: #2595F3;
+}
+
+.heading-container {
+  width: 1000px;
+}
+
+
+.container {
+  width: 800px;
+  background-color: #2595F3;
 }
